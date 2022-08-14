@@ -1,6 +1,6 @@
-package org.jetbrains.plugins.template.services
+package com.github.openexw.convto.services
 
-import org.jetbrains.plugins.template.MyBundle
+import com.github.openexw.convto.MyBundle
 
 class MyApplicationService {
 
