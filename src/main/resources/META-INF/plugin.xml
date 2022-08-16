@@ -15,4 +15,15 @@
         <listener class="com.github.openexw.convto.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
+    <actions>
+        <action id="com.github.openexw.convto.actions.ConvToStructAction"
+                class="com.github.openexw.convto.actions.ConvToStructAction" text="Struct Fields From SQL"
+                description="SQL to go struct">
+            <add-to-group group-id="GenerateGroup" anchor="first"/>
+        </action>
+        <action id="com.github.openexw.convto.actions.ConvToProtoAction"
+                class="com.github.openexw.convto.actions.ConvToProtoAction" text="Proto Fields From SQL">
+            <add-to-group group-id="GenerateGroup" anchor="first"/>
+        </action>
+    </actions>
 </idea-plugin>

@@ -2,6 +2,16 @@ import org.jetbrains.changelog.markdownToHTML
 
 fun properties(key: String) = project.findProperty(key).toString()
 
+// setings repository
+repositories {
+    mavenLocal()
+    maven(url = "https://maven.aliyun.com/repository/public")
+    maven(url = "https://maven-central.storage-download.googleapis.com/repos/central/data/")
+    maven(url = "https://repo.eclipse.org/content/groups/releases/")
+    maven(url = "https://www.jetbrains.com/intellij-repository/releases")
+    mavenCentral()
+}
+
 plugins {
     // Java support
     id("java")
@@ -21,6 +31,10 @@ version = properties("pluginVersion")
 // Configure project's dependencies
 repositories {
     mavenCentral()
+}
+dependencies {
+    implementation("com.github.jsqlparser:jsqlparser:4.5")
+    implementation("cn.hutool:hutool-all:5.8.5")
 }
 
 // Set the JVM language level used to compile sources and generate files - Java 11 is required since 2020.3
