@@ -1,12 +1,17 @@
 package com.github.openexw.convto.services
 
 import cn.hutool.core.util.StrUtil
+import com.intellij.ui.layout.panel
 import net.sf.jsqlparser.parser.CCJSqlParserUtil
 import net.sf.jsqlparser.statement.create.table.CreateTable
 
 class SQLToStruct {
 
     fun xx() {
+        val panel = panel {
+            noteRow("Proto Fields From SQL")
+//            right
+        }
         //    println("Hello World!")
         // 类型列表
         val typeList = hashMapOf(
@@ -51,7 +56,8 @@ class SQLToStruct {
     """.trimIndent()
         // Try adding program arguments via Run/Debug configuration.
         // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-        println("Program arguments: ${args.joinToString()}")
+//        println("Program arguments: ${args.joinToString()}")
+
 
         val table: CreateTable = CCJSqlParserUtil.parse(sql) as CreateTable
 
